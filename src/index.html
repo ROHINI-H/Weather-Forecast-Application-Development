@@ -9,10 +9,48 @@
     <script src="script.js" defer></script>
 </head>
 
-<body>
-    <h1 class="text-3xl font-bold underline">
-        Hello world!
-    </h1>
+<body class="bg-sky-50 p-7 flex flex-col items-center">
+
+    <!-- Header Section -->
+    <header class="mb-7 text-center">
+        <h1 class="text-4xl font-bold text-amber-700 pb-[10px]">Weather Forecast Application</h1>
+        <p class="text-teal-600">View today's weather and a location-based forecast by city name or your current location.</p>
+    </header>
+
+    <!-- Main Container -->
+    <main class="w-full max-w-2xl">
+
+        <!-- Search Bar -->
+        <section class="flex flex-col gap-4 md:flex-row">
+            <input id="city" type="text" placeholder="Enter city name" class="flex-2 p-2 border rounded" />
+            <button id="search_Btn" class="bg-purple-400 text-red-50 px-4 py-2 rounded">Search</button>
+            <button id="location_Btn" class="bg-yellow-600 text-yellow-50 px-4 py-2 rounded">Current Location</button>
+        </section>
+
+        <!-- recently searched cities -->
+        <select id="recentcities" class="w-full mt-4 p-2 border rounded hidden"></select>
+
+        <!-- Weather forecasts by city name & location Section -->
+        <section id="currentWeather" class="bg-white p-4 mt-4 mb-4 rounded shadow hidden">
+            <h2 id="currentCity" class="text-xl text-yellow-700 font-bold mb-2"></h2>
+            <article class="flex items-center gap-5">
+                <img id="cloudIcon" class="w-20 h-20">
+                <div>
+                    <p id="temperature" class="text-xl"></p>
+                    <p id="humidity" class="text-neutral-700"></p>
+                    <p id="wind" class="text-neutral-700"></p>
+                </div>
+            </article>
+        </section>
+
+        <!-- Extended Forecast -->
+        <section id="forecast" class="hidden">
+            <h3 class="text-lg font-medium mb-4">5-Day Forecast</h3>
+            <article id="container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+                <!-- 5 Days forecast weather will be shown here -->
+            </article>
+        </section>
+    </main>
 </body>
 
 </html>
