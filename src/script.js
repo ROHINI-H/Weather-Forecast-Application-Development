@@ -1,4 +1,4 @@
-const API_KEY = 'YOUR_API_KEY_HERE'; // Shoud be replaced with key from openWeather.co
+const API_KEY = 'YOUR_API_KEY_HERE'; // Shoud be replaced with key from openWeather.com[https://openweathermap.org/api]
 
 const city = document.getElementById('city');
 const search_Btn = document.getElementById('search_Btn');
